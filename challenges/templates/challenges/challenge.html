@@ -1,0 +1,15 @@
+{% extends "layout.html" %}
+
+{% block titulo_pagina %}
+    {{ nome_mes }}
+{% endblock  %}
+
+{% block conteudo %}
+    <h2>Desafio de {{ nome_mes }}</h2> <!-- valores dinâmicos -->
+    
+    {% if desafio is not None %}
+        <p>{{ desafio }}</p>
+    {% else %}
+        <h3>Nenhum desafio foi cadastrado para esse mês ainda!</h3>
+    {% endif %}
+{% endblock  %}

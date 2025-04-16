@@ -1,0 +1,13 @@
+{% extends "layout.html" %}
+
+{% block titulo_pagina %}
+    Desafios do mes
+{% endblock %}
+
+{% block conteudo %}
+    <ul>
+        {% for mes in lista_meses %}
+            <li><a href="{% url "challenge_path" mes %}">{{ mes|title }}</a></li>
+        {% endfor %}
+    </ul>
+{% endblock  %}

@@ -1,11 +1,17 @@
+{% load static %}
+
 <!DOCTYPE html>
 <html lang="pt-br">
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>{% block titulo_pagina|title %}Meus desafios{% endblock %}</title>
+    <title>{% block titulo_pagina %}Meus desafios{% endblock %}</title>
+    <link rel="stylesheet" href="{% static "style.css" %}">
+    {% block arquivo_css %}{% endblock  %}
 </head>
 <body>
+    {% block navegacao %}{% endblock  %}
+    <h1 class="titulo_apresentacao">{% block titulo_apresentacao %}{% endblock  %}</h1>
     {% block conteudo %}{% endblock  %}
 </body>
 </html>

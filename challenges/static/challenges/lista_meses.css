@@ -1,0 +1,22 @@
+ul{
+    list-style: none;
+}
+
+ul li a{
+    text-decoration: none;
+    color: #1789b2;
+    font-size: 20px;
+}
+
+ul li a:hover, li:hover{
+    color: aquamarine;
+}
+
+li{
+    margin-bottom: 15px;
+}
+
+li:hover{
+    text-decoration: overline;
+    transition: 0.3s ease-in-out;
+}

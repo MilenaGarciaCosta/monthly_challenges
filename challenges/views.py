@@ -1,7 +1,6 @@
 from django.shortcuts import render
-from django.http import HttpResponse, HttpResponseNotFound, HttpResponseRedirect
+from django.http import Http404, HttpResponseNotFound, HttpResponseRedirect
 from django.urls import reverse
-from django.template.loader import render_to_string
 
 desafios_para_cada_mes = {
     "janeiro": "Não beber álcool",
@@ -43,4 +42,5 @@ def desafio_mensal(request, mes):
             "desafio": texto_desafio
         })
     except:
-        return HttpResponseNotFound("Mês inválido :(")
+        raise Http404() #Vai buscar um arquivo chamado 404.html
+        # Debug = False no final de produção para funcionar

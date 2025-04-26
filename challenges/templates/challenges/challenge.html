@@ -4,9 +4,13 @@
     {{ nome_mes }}
 {% endblock  %}
 
-{% block conteudo %}
-    <h2>Desafio de {{ nome_mes }}</h2> <!-- valores dinâmicos -->
-    
+{% block navegacao %}
+    {% include "challenges/includes/header.html"%}
+{% endblock  %}
+
+{% block titulo_apresentacao %} Desafio de {{ nome_mes }} {% endblock  %}
+
+{% block conteudo %}    
     {% if desafio is not None %}
         <p>{{ desafio }}</p>
     {% else %}

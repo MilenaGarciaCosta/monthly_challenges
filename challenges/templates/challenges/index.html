@@ -1,8 +1,17 @@
 {% extends "layout.html" %}
+{% load static %}
+
+{% block arquivo_css %}
+    <link rel="stylesheet" href="{% static "challenges/lista_meses.css" %}">
+{% endblock  %}
 
 {% block titulo_pagina %}
     Desafios do mes
 {% endblock %}
+
+{% block titulo_apresentacao %}
+    Lista de meses
+{% endblock  %}
 
 {% block conteudo %}
     <ul>

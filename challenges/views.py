@@ -5,7 +5,7 @@ from django.urls import reverse
 desafios_para_cada_mes = {
     "janeiro": "Não beber álcool",
     "fevereiro": "Ir caminhar uma vez por semana",
-    "marco": "Sair sozinha ao menos 1 vez",
+    "março": "Sair sozinha ao menos 1 vez",
     "abril": "Ir para a academia 3 dias na semana",
     "maio": "Descobrir um novo hobbie",
     "junho": "Encontrar migos de longa data ao menos 1 vez",

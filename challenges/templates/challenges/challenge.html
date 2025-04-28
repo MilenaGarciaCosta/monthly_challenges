@@ -1,19 +1,29 @@
 {% extends "layout.html" %}
+{% load static %}
 
 {% block titulo_pagina %}
     {{ nome_mes }}
+{% endblock  %}
+
+{% block arquivo_css %}
+    <link rel="stylesheet" href="{% static "challenges/desafio.css" %}">
 {% endblock  %}
 
 {% block navegacao %}
     {% include "challenges/includes/header.html"%}
 {% endblock  %}
 
-{% block titulo_apresentacao %} Desafio de {{ nome_mes }} {% endblock  %}
+    {% block titulo_apresentacao %} Desafio de {{ nome_mes }} {% endblock  %}
 
-{% block conteudo %}    
+ {% block conteudo %}    
     {% if desafio is not None %}
-        <p>{{ desafio }}</p>
+        <div class="container_texto_desafio">
+            <input type="checkbox" id="checkbox">
+            <label for="checkbox" class="custom-checkbox"></label>
+            <p class="texto_desafio" >{{ desafio }}</p>
+        </div>
+        
     {% else %}
-        <h3>Nenhum desafio foi cadastrado para esse mês ainda!</h3>
+        <h3 class="texto_semDesafio">Nenhum desafio foi cadastrado para esse mês ainda!</h3>
     {% endif %}
 {% endblock  %}

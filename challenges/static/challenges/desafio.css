@@ -1,0 +1,82 @@
+/*@import url(../../../static/style.css);*/
+
+html{
+    padding: 40px;
+}
+
+.texto_desafio {
+    color: var(--branco);
+}
+
+.container_texto_desafio {
+    width: fit-content;
+    margin: 0 auto;
+    display: flex;
+    flex-direction: row;
+}
+
+.texto_semDesafio{
+    width: fit-content;
+    color: var(--cinza-translucido);
+    margin: 0 auto;
+}
+
+.texto_desafio {
+    margin-left: 15px;
+}
+
+#checkbox {
+    display: none;
+}
+
+/* Estilo checkbox inicial */
+.custom-checkbox {
+    display: inline-block;
+    width: 25px;
+    height: 25px;
+    background-color: var(--cinza-translucido);
+    border: 2px solid var(--branco);
+    border-radius: 6px;
+    vertical-align: middle;
+    cursor: pointer;
+    position: relative;
+}
+
+
+/* Estilo interno da checkbox */
+.custom-checkbox::after {
+    content: "✓";
+    color: var(--branco);
+    font-size: 28px;
+    display: flex;
+    align-items: center;
+    position: absolute;
+    width: 6px;
+    height: 12px;
+    top: 2px;
+    left: 9px;
+    transform: rotate(20deg);
+    opacity: 0;
+    transition: 0.2s;
+}
+
+/* Removendo ou alterando estilos da checkbox após ser ativada */
+#checkbox:checked+.custom-checkbox {
+    background-color: var(--azul);
+    border: none;
+}
+
+#checkbox:checked+.custom-checkbox::after {
+    opacity: 1;
+}
+
+#checkbox:checked~.texto_desafio {
+    text-decoration: line-through;
+    color: var(--cinza-translucido);
+}
+
+/* Navegação */
+.voltar_index {
+    color: var(--azul);
+    text-decoration: none;
+}

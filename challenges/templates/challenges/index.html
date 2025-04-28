@@ -14,7 +14,7 @@
 {% endblock  %}
 
 {% block conteudo %}
-    <ul>
+    <ul class="lista_meses">
         {% for mes in lista_meses %}
             <li><a href="{% url "challenge_path" mes %}">{{ mes|title }}</a></li>
         {% endfor %}
